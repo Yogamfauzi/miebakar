@@ -1,0 +1,316 @@
+        :root {
+            --primary: #2E7D32;
+            --primary-light: #4CAF50;
+            --primary-dark: #1B5E20;
+            --secondary: #81C784;
+            --background: #F1F8E9;
+            --text: #212121;
+            --text-light: #757575;
+            --white: #FFFFFF;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--background);
+            color: var(--text);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo i {
+            font-size: 28px;
+        }
+        
+        h1 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+        
+        .date-time {
+            background-color: var(--primary-dark);
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        
+        main {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+        }
+        
+        .card {
+            background-color: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .status-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .status-card {
+            background: linear-gradient(145deg, var(--primary-light), var(--primary));
+            color: var(--white);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 160px;
+            transition: transform 0.3s;
+        }
+        
+        .status-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .status-card h3 {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        
+        .status-card .value {
+            font-size: 36px;
+            font-weight: 700;
+        }
+        
+        .status-card .detail {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+        
+        .chart-container {
+            width: 100%;
+            height: 300px;
+        }
+        
+        .card-title {
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+            font-size: 18px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: space-between;
+        }
+        
+        .card-title i {
+            color: var(--primary);
+        }
+        
+        .card-title > span {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .clear-all-btn {
+            background-color: transparent;
+            color: var(--text-light);
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 6px 12px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .clear-all-btn:hover {
+            background-color: #FFEBEE;
+            color: #E53935;
+            border-color: #FFCDD2;
+        }
+        
+        .progress-container {
+            margin: 20px 0;
+        }
+        
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        
+        .progress-bar {
+            height: 12px;
+            background-color: #E8F5E9;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-light), var(--primary-dark));
+            border-radius: 6px;
+            transition: width 0.5s ease-in-out;
+        }
+        
+        .activity-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .delete-btn {
+            background: none;
+            border: none;
+            color: #bdbdbd;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 4px;
+            transition: all 0.2s;
+            margin-left: 10px;
+        }
+        
+        .delete-btn:hover {
+            color: #E53935;
+            background-color: rgba(229, 57, 53, 0.1);
+        }
+        
+        .activity-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #E8F5E9;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .activity-item:last-child {
+            border-bottom: none;
+        }
+        
+        .activity-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            margin-right: 12px;
+        }
+        
+        .activity-content {
+            flex-grow: 1;
+        }
+        
+        .activity-title {
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+        
+        .activity-time {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+        
+        .prediction-card {
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        .prediction-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin: 15px 0;
+        }
+        
+        .notification {
+            background-color: #FFF9C4;
+            border-left: 4px solid #FBC02D;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .notification.full {
+            background-color: #FFEBEE;
+            border-left: 4px solid #E53935;
+        }
+        
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 10px;
+        }
+        
+        .pagination button {
+            background-color: var(--white);
+            border: 1px solid var(--primary-light);
+            color: var(--primary);
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .pagination button.active,
+        .pagination button:hover {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+        
+        @media (max-width: 900px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+            
+            .status-cards {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .status-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .date-time {
+                width: 100%;
+                text-align: center;
+            }
+        }
